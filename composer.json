@@ -1,0 +1,17 @@
+{
+  "name": "prophusion/autobuild",
+  "description": "Notices new PHP releases that have not been built for prophusion.org and builds them",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mike Baynton",
+      "email": "mike@mbaynton.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "6.2.1",
+    "ulrichsg/getopt-php": "2.3.0",
+    "icecave/semver": "3.0.3"
+  }
+}
