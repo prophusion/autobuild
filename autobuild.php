@@ -165,12 +165,6 @@ function buildRelease($release) {
   /**
    * @var Getopt $getopt
    */
-  static $docker_restarted = FALSE;
-  if (! $docker_restarted) {
-    // Docker containers seem to lose connectivity if docker has been running for awhile...
-    passthru("/usr/sbin/service docker restart");
-    $docker_restarted = TRUE;
-  }
   $getopt = $GLOBALS['getopt'];
   $vol = $getopt['upload-script-dir'];
   passthru("docker run --name prophusion-autobuilder -v $vol:/upload prophusion/prophusion-builder $release ; docker rm prophusion-autobuilder");
